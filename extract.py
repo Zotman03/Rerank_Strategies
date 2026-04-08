@@ -19,7 +19,7 @@ def parse_results(text):
     return results
 
 
-with open("slurm.out") as f:
+with open("slurm-1371564.out") as f:
     text = f.read()
 
 parsed = parse_results(text)

@@ -1,8 +1,8 @@
 import json
 import html
 
-input_file = "reranked_results.json"
-output_file = "results_t5.html"
+input_file = "reranked_qwen4.json"
+output_file = "results_qwen4.html"
 
 with open(input_file, "r", encoding="utf-8") as f:
     data = json.load(f)
@@ -37,6 +37,7 @@ for r in data:
 <p><b>Document ID:</b> {html.escape(r["document_id"])}</p>
 <p><b>Original Score:</b> {r["score"]}</p>
 <p><b>Rerank Score:</b> {r.get("rerank_score","")}</p>
+<p><b>Rerank Score:</b> {r.get("qwen_score","")}</p>
 
 <h3>Content</h3>
 <div class="content">{html.escape(r["content"])}</div>

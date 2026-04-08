@@ -1,0 +1,28 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 784564
+##  Job Name : Qwen3_Para0.6B
+##  Nodelist : gpu2608
+##      CPUs : 4
+##  Mem/Node : 131072 MB
+## Directory : /oscar/data/sbach/zning3/Rerank_Strategies
+##   Job Started : Mon Mar 16 21:52:50 EDT 2026
+###############################################################################
+Lmod has detected the following error: The following module(s) are unknown:
+"cuda/12.1.1-ebglvvq"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "cuda/12.1.1-ebglvvq"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Starting
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  20%|██        | 62/310 [00:00<00:00, 588.88it/s]Loading weights:  47%|████▋     | 146/310 [00:00<00:00, 733.40it/s]Loading weights:  71%|███████   | 220/310 [00:00<00:00, 649.10it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 805.51it/s]
+/users/zning3/.conda/envs/caig_conda_env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:2333: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+scores:  [0.75390625, 0.984375, 0.9765625, 0.984375, 0.69140625, 0.40625, 0.1640625, 0.00193023681640625, 0.0034942626953125, 0.376953125, 0.0810546875, 0.875, 0.9765625, 0.376953125, 0.00075531005859375]
+DONE

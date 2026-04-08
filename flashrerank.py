@@ -4,7 +4,7 @@ from flashrank import Ranker, RerankRequest
 with open("parsed_results.json", "r", encoding="utf-8") as f:
     results = json.load(f)
 
-query = "By how much has the ocean surface temperature increased on average between 1850-1900 and 2011-2020?"
+query = "By how much of the ocean surface warming occurred since 1980"
 # ranker = Ranker() #MSmarco
 ranker = Ranker(model_name="rank-T5-flan")
 passages = [
