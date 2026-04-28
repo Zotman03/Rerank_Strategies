@@ -7,9 +7,8 @@
 #SBATCH -t 24:00:00
 
 DEVELOPER_DIR="/oscar/data/sbach/zning3/Rerank_Strategies"
-CONDA_ENV="caig_conda_env"
+CONDA_ENV="caig_conda"
 
-module load cuda/12.1.1-ebglvvq
 module load miniforge3/25.3.0-3
 source ${MAMBA_ROOT_PREFIX}/etc/profile.d/conda.sh
 
@@ -22,7 +21,9 @@ export TORCH_EXTENSIONS_DIR="/tmp/$USER/torch_extensions"  # Use safe cache dire
 
 # Run the Python script using the developer's directory
 echo "Starting"
-python "$DEVELOPER_DIR/Qwen_FourBil.py"
+# python "$DEVELOPER_DIR/Qwen_PointSix.py"
+# python "$DEVELOPER_DIR/Qwen_FourBil.py"
+python "$DEVELOPER_DIR/Qwen_EightBil.py"
 
 # Check exit status
 if [ $? -eq 0 ]; then

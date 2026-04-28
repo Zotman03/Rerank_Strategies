@@ -48,7 +48,7 @@ suffix_tokens = tokenizer.encode(suffix, add_special_tokens=False)
         
 task = 'Given a web search query, retrieve relevant passages that answer the query'
 
-queries = ['By how much has the ocean surface temperature increased on average between 1850–1900 and 2011–2020?']
+queries = ['By how much of the ocean surface warming occurred since 1980']
 # load the data, put chunks into the documents, separated by comma
 with open("parsed_results.json", "r", encoding="utf-8") as f:
     results = json.load(f)

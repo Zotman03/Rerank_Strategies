@@ -35,8 +35,8 @@ def compute_logits(inputs, **kwargs):
     scores = batch_scores[:, 1].exp().tolist()
     return scores
 
-tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen3-Reranker-4B", padding_side='left')
-model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen3-Reranker-4B").eval()
+tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen3-Reranker-8B", padding_side='left')
+model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen3-Reranker-8B").eval()
 
 # We recommend enabling flash_attention_2 for better acceleration and memory saving.
 # model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen3-Reranker-0.6B", torch_dtype=torch.float16, attn_implementation="flash_attention_2").cuda().eval()
@@ -70,7 +70,7 @@ for r, score in zip(results, scores):
     r["qwen_score"] = float(score)
 
 results = sorted(results, key=lambda x:x["qwen_score"], reverse=True)
-with open("reranked_qwen4.json", "w", encoding='utf-8') as f:
+with open("reranked_qwen8.json", "w", encoding='utf-8') as f:
     json.dump(results, f, indent=2, ensure_ascii=False)
 
 print("scores: ", scores)

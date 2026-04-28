@@ -1,4 +1,4 @@
-import re, json
+import re, json, sys
 
 def parse_results(text):
     pattern = r"Result\s+(\d+):\nScore:\s*([\d.]+)\nDocument ID:\s*(.*?)\nContent:\n-+\n(.*?)\n-+\nMetadata:\s*(\{.*?\})"
@@ -19,7 +19,11 @@ def parse_results(text):
     return results
 
 
-with open("slurm-1371564.out") as f:
+if len(sys.argv) != 2:
+    print("Usage: python script.py xxx.out file")
+    sys.exit(1)
+
+with open(sys.argv[1]) as f:
     text = f.read()
 
 parsed = parse_results(text)

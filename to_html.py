@@ -1,8 +1,11 @@
-import json
-import html
+import json, html, sys
 
-input_file = "reranked_qwen4.json"
-output_file = "results_qwen4.html"
+if len(sys.argv) != 3:
+    print("Usage: python script.py <input_json> <output_html>")
+    sys.exit(1)
+
+input_file = sys.argv[1]
+output_file = sys.argv[2]
 
 with open(input_file, "r", encoding="utf-8") as f:
     data = json.load(f)
@@ -53,3 +56,4 @@ with open(output_file, "w", encoding="utf-8") as f:
     f.write("\n".join(html_parts))
 
 print("HTML file written to:", output_file)
+# usage: python script.py reranked_qwen8.json results_qwen8.html

@@ -1,25 +1,0 @@
-## SLURM PROLOG ###############################################################
-##    Job ID : 824185
-##  Job Name : Qwen3_Para4B
-##  Nodelist : gpu2255
-##      CPUs : 4
-##  Mem/Node : 131072 MB
-## Directory : /oscar/data/sbach/zning3/Rerank_Strategies
-##   Job Started : Tue Mar 17 19:58:40 EDT 2026
-###############################################################################
-Lmod has detected the following error: The following module(s) are unknown:
-"cuda/12.1.1-ebglvvq"
-
-Please check the spelling or version number. Also try "module spider ..."
-It is also possible your cache file is out-of-date; it may help to try:
-  $ module --ignore_cache load "cuda/12.1.1-ebglvvq"
-
-Also make sure that all modulefiles written in TCL start with the string
-#%Module
-
-
-
-Starting
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:  11%|█         | 43/398 [00:00<00:00, 424.66it/s]Loading weights:  22%|██▏       | 86/398 [00:00<00:00, 353.00it/s]Loading weights:  45%|████▌     | 180/398 [00:00<00:00, 581.61it/s]Loading weights:  61%|██████    | 243/398 [00:00<00:00, 572.07it/s]Loading weights:  86%|████████▋ | 344/398 [00:00<00:00, 687.99it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 632.15it/s]
-[2026-03-17T20:29:32.229] error: *** JOB 824185 ON gpu2255 CANCELLED AT 2026-03-17T20:29:32 DUE to SIGNAL Terminated ***
